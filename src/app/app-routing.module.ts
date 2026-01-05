@@ -23,14 +23,8 @@ const AppRoutes :Routes=[
         component:DashboardComponent
     },
     {
-        path:"",
-        redirectTo:"home",
-        pathMatch:"full"
-    },
-    {
         path:"fairs",
         component:FairDashboardComponent,
-        canActivateChild:[AuthGuard],
         children:[
             {
                 path:":id",
@@ -41,7 +35,7 @@ const AppRoutes :Routes=[
     {
         path:"users",
         component:UserBashbaordComponent,
-        canActivate:[AuthComponent],
+        canActivate:[AuthGuard],
         children:[
             {
                 path:"userform",
@@ -60,7 +54,7 @@ const AppRoutes :Routes=[
     {
         path:"product",
         component:ProductDashboardComponent,
-        canActivate:[AuthComponent],
+        canActivate:[AuthGuard],
         children:[
             {
                 path:'form',
