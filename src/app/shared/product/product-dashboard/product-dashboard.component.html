@@ -1,0 +1,17 @@
+
+<p class="text-center mt-3 mainbtn">  <button matTooltip="Go back to Home" class="homenbtn" routerLink="/home" mat-fab><mat-icon>arrow_back</mat-icon></button>Add Product<button routerLink="/product/form" class="ml-3" mat-fab color="primary"><mat-icon>add</mat-icon></button></p>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+             <ul class="list-group">
+                <li class="list-group-item mt-3 prodlist" [routerLink]="prod.id" *ngFor="let prod of ProductsArr">
+                        {{prod.title}}
+                </li>
+             </ul>
+        </div>
+        <div class="col-md-6 offset-md-1">
+                <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+
+.card{
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color:whitesmoke;
+}
+
+.card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgb(0, 0, 0,0.15);
+    background-color: lightgray;
+}

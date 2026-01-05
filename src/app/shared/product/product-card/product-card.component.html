@@ -1,0 +1,16 @@
+
+<mat-card  class="mb-4 prodcard">
+    <mat-card-header>
+        <img [src]="[productInfo.img]" class="img" alt="">
+        <h3 class="ml-5">
+            {{productInfo.title}}
+        </h3>
+    </mat-card-header>
+    <mat-card-content>
+        <p class="ml-10">{{productInfo.brand}}</p>
+        <p>{{productInfo.description}}</p>
+        <p><span>{{productInfo.price|currency:'INR'}}</span> <span class="price ml-3">{{productInfo.originalPrice|currency:'INR'}}</span></p>
+        <span  class="badge badge-success span">{{productInfo.rating}}</span>
+       
+    </mat-card-content>
+</mat-card>

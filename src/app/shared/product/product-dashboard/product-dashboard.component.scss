@@ -1,0 +1,15 @@
+
+.prodlist{
+    transition: all 0.3s ease;
+}
+.prodlist:hover{
+    transform: translateY(-6px);
+    background-color: aquamarine;
+}
+.mainbtn{
+    position: relative;
+}
+.homenbtn{
+    position: absolute;
+    left: 0px;
+}

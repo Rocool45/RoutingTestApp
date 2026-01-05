@@ -1,0 +1,16 @@
+
+
+<div class="card mb-3" [routerLink]="fairsinfo.fairId">
+    <div class="card-headers text-center mt-1">
+        <h3>{{fairsinfo.fairName}}</h3>
+    </div>
+    <div class="card-body text-center">
+        <p>
+          Event Type :  {{fairsinfo.type}}
+        </p>
+
+        <p>
+          Date : {{fairsinfo.startDate | date}}
+        </p>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+
+<mat-card>
+    <mat-card-content>
+       <form #userForm="ngForm" (ngSubmit)="onSubmit()">
+         <div class="form-group">
+            <input type="text" ngModel class="form-control" placeholder="First Name" name="fname" id="">
+        </div>
+
+         <div class="form-group">
+            <input type="text" ngModel class="form-control" placeholder="Last Name" name="lname" id="">
+        </div>
+
+         <div class="form-group">
+            <input type="text" ngModel class="form-control" placeholder="Email" name="email" id="">
+        </div>
+
+         <div class="form-group">
+            <input type="text" ngModel  class="form-control" placeholder="Contact" name="contact" id="">
+        </div>
+
+         <div class="form-group">
+            <label for="">User Role</label>
+          <select ngModel class="form-control" name="role" >
+            <option  value="User">User</option>
+            <option  value="Admin">Admin</option>
+          </select>
+        </div>
+
+         <div class="form-group">
+            <input type="text" ngModel class="form-control" placeholder="Image Url" name="img" id="">
+        </div>
+
+            <button type="submit" *ngIf="!isInEditMode" mat-raised-button color="primary" class="btn-block">Add User</button>
+            <button  (click)="onUpdate()" type="button" *ngIf="isInEditMode" mat-raised-button color="primary" class="btn-block">Update User</button>
+    </form>
+    </mat-card-content>
+</mat-card>

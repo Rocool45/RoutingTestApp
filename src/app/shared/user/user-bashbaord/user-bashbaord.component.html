@@ -1,0 +1,19 @@
+
+<p class="text-center mt-3 mainbtn">    <button class="homenbtn" matTooltip="Go back to Home" routerLink="/home" mat-fab><mat-icon>arrow_back</mat-icon></button>
+ Add User <button routerLink="/users/userform" mat-fab color="primary"> <mat-icon>add</mat-icon>   </button></p>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-4">
+            <ul class="list-group text-center ">
+                <li role="button" class="list-group-item list mb-3" [routerLink]="user.id" 
+                [queryParams]="{role:user.role}" *ngFor="let user of UserArr">
+                 {{user.fname}} {{user.lname}}
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6 offset-md-1">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
