@@ -12,16 +12,14 @@ import { AuthService } from "./auth.service";
 export class AuthGuard implements CanActivate{
     
     private routes = inject(Router);
-    private _authService = inject(AuthService);
-
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot):  Observable<boolean | UrlTree> 
     | Promise<boolean | UrlTree> | boolean | UrlTree {
-        if(this._authService.getToken()){
+        if(localStorage.getItem("token")){
             return true
         }else{
           return this.routes.createUrlTree([""])
         }
-        return false
+       
     }
 
 }
