@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { SnackbarService } from '../../service/snackbar.service';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +10,8 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
 
   constructor(
-    private router : Router
+    private router : Router,
+    private snckbar :SnackbarService
   ) { }
 
   ngOnInit(): void {
@@ -18,5 +20,6 @@ export class NavbarComponent implements OnInit {
   logout(){
     localStorage.clear()
     this.router.navigate([""])
+    this.snckbar.opensncakbar("user is logout")
   }
 }
