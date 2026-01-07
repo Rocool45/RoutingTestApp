@@ -48,6 +48,8 @@ export class AuthComponent implements OnInit {
     this._authService.signup(obj)
     .subscribe({
       next:res=>{
+        this._authService.setToken(res.token)
+      this._authService.setUserRole(res.userRole)
         this.alReadyhaveAccount = false
        this.sncakbar.opensncakbar(res.message)
       },

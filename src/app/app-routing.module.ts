@@ -12,6 +12,7 @@ import { PageNotFoundComponent } from "./shared/component/page-not-found/page-no
 import { DashboardComponent } from "./shared/component/dashboard/dashboard.component";
 import { AuthComponent } from "./shared/component/auth/auth.component";
 import { AuthGuard } from "./shared/service/auth.guard";
+import { UserRoleGuard } from "./shared/service/userRole.gaurd";
 
 const AppRoutes :Routes=[
     {
@@ -35,7 +36,11 @@ const AppRoutes :Routes=[
     {
         path:"users",
         component:UserBashbaordComponent,
-        canActivate:[AuthGuard],
+        canActivate:[AuthGuard,UserRoleGuard],
+        
+        data :{
+            userRole:["superAdmin","buyer"]
+        },
         children:[
             {
                 path:"userform",

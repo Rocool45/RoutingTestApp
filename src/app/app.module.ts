@@ -28,7 +28,8 @@ import { A11yModule } from "@angular/cdk/a11y";
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthComponent } from './shared/component/auth/auth.component';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { NotAuthRiasedComponent } from './shared/component/not-auth-riased/not-auth-riased.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +46,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
     FairDashboardComponent,
     PageNotFoundComponent,
     DashboardComponent,
-    AuthComponent
+    AuthComponent,
+    NotAuthRiasedComponent
   ],
   imports: [
     BrowserModule,
